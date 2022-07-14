@@ -206,7 +206,7 @@
   fill: #FFF;
 }
 .icon__wrap svg:hover path {
-  fill: #4AD295;
+  fill: rgba(0,0,0,.7);
   transition: .3s;
 }
 
@@ -228,7 +228,7 @@
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 768px) {
   .content h3 {
     font-size: 30px;
     line-height: 45px;
@@ -251,5 +251,26 @@
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
+  }
+}
+
+@media (max-height: 400px) {
+  .content {
+    height: 100px;
+    padding: 0;
+  }
+  .content h3 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .qr__code {
+    width: 60px;
+    bottom: 60px;
+  }
+  .contact__wrap {
+    bottom: 0;
+  }
+  .icon__wrap svg {
+    width: 24px;
   }
 }
