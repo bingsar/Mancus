@@ -211,6 +211,9 @@
   transition: .3s;
 }
 
+.text {
+  display: none;
+}
 
 @media (max-width: 940px) {
   .content {
@@ -240,9 +243,27 @@
   .logo__wrap {
     max-width: 100%;
   }
+  .text {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 200;
+    display: inline-block;
+    position: absolute;
+    bottom: 250px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+    z-index: 100000;
+    padding: 10px 0;
+  }
+  .text:hover {
+    opacity: .7;
+    transition: .3s ease-in-out;
+  }
   .qr__code {
     z-index: 100000;
     bottom: 200px;
+    display: none;
   }
   .contact__wrap {
     display: flex;
@@ -260,6 +281,9 @@
     height: 100px;
     padding: 0;
     top:45%
+  }
+  .text {
+    bottom: 100px;
   }
   .content h3 {
     font-size: 20px;

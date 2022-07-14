@@ -2,6 +2,7 @@ import Head from 'next/head'
 import {useRef, useEffect, useState} from "react";
 import Image from 'next/image'
 import qr from '/public/qr-code.png'
+import poster from '/public/video/poster.jpg'
 import { motion } from "framer-motion";
 
 import styles from '../styles/Home.module.css'
@@ -40,6 +41,7 @@ export default function Home() {
                 autoPlay
                 loop
                 muted
+                poster={poster}
                 className={styles.bg__video}>
                 <source src='video/bg__video.mov' type='video/mov' />
                 <source src='video/bg__video.mp4' type='video/mp4' />
@@ -89,6 +91,11 @@ export default function Home() {
                       <h3>Advising</h3>
                       <h3>Market Analysis</h3>
                   </div>
+                  <a href="https://www.bvifsc.vg/certificate-validation?%3FqrCode=B1E8C4EE88" target="_blank"  rel="noreferrer">
+                      <div className={styles.text}>
+                              About
+                      </div>
+                  </a>
                   <div className={styles.qr__code}>
                       <Image src={qr} layout={"responsive"} width="300" height="300"></Image>
                   </div>
