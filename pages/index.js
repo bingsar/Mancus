@@ -16,6 +16,11 @@ export default function Home() {
   }
 
   const videoRef = useRef();
+  const mainRef = useRef()
+
+  function handleTouch() {
+      videoRef.current.play()
+  }
 
   useEffect(() => {
     setTimeout(()=>{
@@ -31,7 +36,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <main ref={mainRef} onTouchStart={() => handleTouch()}>
           <section className={styles.hero}>
             <div className={styles.mask}></div>
             <video
