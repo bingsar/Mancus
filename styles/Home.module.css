@@ -35,12 +35,12 @@
 .logo__wrap {
   background: rgba(0,0,0,.3);
   padding: 30px;
-  max-width: 300px;
+  max-width: 450px;
 
 }
 .logo {
   position: relative;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat Alternates', sans-serif;
   font-weight: 200;
   font-size: 56px;
   line-height: 24px;
@@ -52,11 +52,17 @@
   -webkit-background-clip: text;
   background-clip: text;
   z-index: 100;
+  text-align: center;
 }
 .logo span {
   font-size: 20px;
   line-height: 22px;
   margin-left: 2px;
+}
+.since {
+  font-size: 16px !important;
+  line-height: 16px !important;
+  color: #fff;
 }
 .content__wrap {
   display: block;
@@ -66,25 +72,20 @@
   bottom: 0;
   padding: 50px;
   z-index: 100;
+  background: rgba(0,0,0,.3);
 }
 .content h3 {
-  font-family: "Montserrat", sans-serif;
-  margin: 0;
-  font-size: 96px;
-  line-height: 110px;
+  font-family: 'Montserrat Alternates', sans-serif;
   font-weight: 800;
-  background: #44A08D;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2f8070, #44A08D);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2f8070, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
+  margin: 0;
+  font-size: 56px;
+  line-height: 60px;
+  color: #3AE3D2;
 }
 .form_button {
   display: flex;
   position: relative;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat Alternates', sans-serif;
   font-weight: 200;
   width: 200px;
   height: 50px;
@@ -107,7 +108,7 @@
   z-index: 100;
   padding-right: 50px;
   color: #FFF;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat Alternates', sans-serif;
   font-size: 16px;
   font-weight: 200;
   letter-spacing: 1px;

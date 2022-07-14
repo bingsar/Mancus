@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import { useRef,useEffect } from "react";
 import Image from 'next/image'
+import { motion } from "framer-motion";
+
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -39,7 +41,8 @@ export default function Home() {
                       <div className={styles.logo__wrap}>
                           <div className={styles.logo}>
                             Mancus<br/>
-                              <span>Group Limited</span>
+                              <span>Group Limited</span><br />
+                              <motion.span animate={{ opacity: .5 }} initial={{ opacity: 0 }} transition={{delay:.5, ease: "easeOut", duration: 3 }} className={styles.since}>Since 2004</motion.span>
                           </div>
                       </div>
                       <div className={styles.form_button}>
