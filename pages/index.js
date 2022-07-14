@@ -61,7 +61,8 @@ export default function Home() {
                 loop
                 muted
                 className={styles.bg__video}>
-            <source src='video/bg__video.mp4' type='video/mp4' />
+                <source src='video/bg__video.mov' type='video/mov' />
+                <source src='video/bg__video.mp4' type='video/mp4' />
             </video>
               <div className={styles.hero__wrap}>
                   <div className={styles.nav__wrap}>
