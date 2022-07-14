@@ -33,7 +33,6 @@
   justify-content: space-between;
 }
 .logo__wrap {
-  background: rgba(0,0,0,.3);
   padding: 30px;
   max-width: 450px;
 
@@ -41,16 +40,11 @@
 .logo {
   position: relative;
   font-family: 'Montserrat Alternates', sans-serif;
-  font-weight: 200;
+  font-weight: 400;
   font-size: 56px;
   line-height: 24px;
   padding: 20px;
-  background: #abbaab;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
+  color: #162B35;
   z-index: 100;
   text-align: center;
 }
@@ -62,7 +56,7 @@
 .since {
   font-size: 16px !important;
   line-height: 16px !important;
-  color: #fff;
+  color: #162B35;
 }
 .content__wrap {
   display: block;
@@ -71,23 +65,35 @@
   position: absolute;
   bottom: 0;
   padding: 50px;
+  left: 47%;
   z-index: 100;
-  background: rgba(0,0,0,.3);
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 100%;
+  height: 340px;
 }
 .content h3 {
-  font-family: 'Montserrat Alternates', sans-serif;
-  font-weight: 900;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   margin: 0;
   letter-spacing: 3px;
+
   font-size: 56px;
-  line-height: 60px;
-  background: #3AE3D2;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #3AE3D2, #52cbb2);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #3AE3D2, #52cbb2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
+  line-height: 80px;
+  color: #162B35;
+  text-shadow: 5px 5px 20px #FFF;
 }
+.content h3:nth-child(1) {
+  left: -139px;
+  position: relative;
+}
+.content h3:nth-child(3) {
+  right: -253px;
+  position: relative;
+}
+
 .form_button {
   display: flex;
   position: relative;
@@ -111,13 +117,13 @@
   position: absolute;
   right: 0;
   bottom: 50px;
-  z-index: 100;
   padding-right: 50px;
   color: #FFF;
   font-family: 'Montserrat Alternates', sans-serif;
   font-size: 16px;
   font-weight: 200;
   letter-spacing: 1px;
+  z-index: 1000000;
 }
 .twitter {
   display: flex;
@@ -125,4 +131,125 @@
 }
 .icon__wrap {
   margin-right: 10px;
+  margin-top: 30px;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0, .7);
+  z-index: 10000;
+}
+.closed {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  top: 0;
+  position: absolute;
+}
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999999;
+}
+.input__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.input__wrap p {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 26px;
+  margin-right: 10px;
+  color: #FFF;
+}
+.input__wrap input {
+  border: 0;
+  border-radius: 0;
+  height: 30px;
+  opacity: .5;
+  width: 400px;
+}
+
+.email {
+  display: flex;
+  align-items: center;
+}
+.email span:last-of-type {
+  margin-left: 10px;
+}
+
+.contact__wrap {
+  display: flex;
+  color: #FFF;
+  position: relative;
+  z-index: 100000;
+  margin-right: 50px;
+}
+.qr__code {
+  position: absolute;
+  width: 120px;
+  right: 50px;
+  bottom: 50px;
+}
+.icon__wrap svg {
+  width: 32px;
+  color: #FFF;
+  cursor: pointer;
+}
+.icon__wrap svg path{
+  fill: #FFF;
+}
+.icon__wrap svg:hover path {
+  fill: #4AD295;
+  transition: .3s;
+}
+
+
+@media (max-width: 940px) {
+  .content {
+    left: 50%;
+  }
+  .content h3:nth-child(1){
+    left: unset;
+  }
+  .content h3:nth-child(3){
+    right: unset;
+  }
+  .qr__code {
+    left: 50%;
+    right: unset;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 550px) {
+  .content h3 {
+    font-size: 35px;
+    line-height: 55px;
+  }
+  .nav__wrap {
+    display: block;
+  }
+  .logo__wrap {
+    max-width: 100%;
+  }
+  .qr__code {
+    z-index: 100000;
+    bottom: 150px;
+  }
+  .contact__wrap {
+    display: flex;
+    color: #FFF;
+    position: fixed;
+    z-index: 100000;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
