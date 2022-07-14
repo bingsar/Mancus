@@ -19,7 +19,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(()=>{
       videoRef.current.play()
-    },5000)
+    },10)
   }, []);
 
   return (
@@ -31,26 +31,6 @@ export default function Home() {
       </Head>
 
       <main>
-          <div className={isOpen? styles.popup : styles.closed}>
-              <form action="">
-                  <div className={styles.input__wrap}>
-                      <p>Company</p>
-                      <input type="text" id="company" name="company"/>
-                  </div>
-                  <div className={styles.input__wrap}>
-                      <p>Name</p>
-                      <input type="text" id="name" name="name"/>
-                  </div>
-                  <div className={styles.input__wrap}>
-                        <p>E-mail</p>
-                        <input type="email" id="email" name="email"/>
-                  </div>
-                  <div className={styles.input__wrap}>
-                        <p>Phone</p>
-                        <input type="phone" id="phone" name="phone"/>
-                  </div>
-              </form>
-          </div>
           <section className={styles.hero}>
             <div className={styles.mask}></div>
             <video
