@@ -259,14 +259,15 @@
   .content {
     height: 100px;
     padding: 0;
+    top:45%
   }
   .content h3 {
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 20px;
+    line-height: 25px;
   }
   .qr__code {
     width: 60px;
-    bottom: 60px;
+    bottom: 100px;
   }
   .contact__wrap {
     bottom: 0;
