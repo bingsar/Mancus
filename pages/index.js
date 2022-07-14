@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Magnus | Group</title>
+        <title>Mancus | Group Limited</title>
         <meta name="description" content="Group" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
